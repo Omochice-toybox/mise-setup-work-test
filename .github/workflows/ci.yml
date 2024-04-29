@@ -6,6 +6,14 @@ on:
 jobs:
   check-mise:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        goos:
+          - darwin
+          - linux
+        goarch:
+          - amd64
+          - arm64
     permissions:
       contents: read
     env:
