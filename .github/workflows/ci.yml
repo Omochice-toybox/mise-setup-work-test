@@ -8,5 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    env:
+      MISE_GLOBAL_CONFIG_FILE: "${{ github.workspace }}/.mise.toml"
     steps:
       - uses: jdx/mise-action@0c39a522dfbced3ed83924152c45804a71ce216f # v2.0.4
