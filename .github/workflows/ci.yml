@@ -1,0 +1,12 @@
+name: check mise
+
+on:
+  - push
+
+jobs:
+  check-mise:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: jdx/mise-action@0c39a522dfbced3ed83924152c45804a71ce216f # v2.0.4
